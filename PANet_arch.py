@@ -21,7 +21,6 @@ class PA(nn.Module):
         return out
     
 class PAConv(nn.Module):
-    ''''''
     def __init__(self, nf, k_size=3):
 
         super(PAConv, self).__init__()
@@ -86,7 +85,6 @@ class SCPA(nn.Module):
         return out
     
 class PANet(nn.Module):
-    '''This our '''
     def __init__(self, in_nc, out_nc, nf, nb):
         super(PANet, self).__init__()
         # SCPA
