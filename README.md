@@ -2,6 +2,9 @@
 Pixel Attention Network (PANet) is for AIM2020 Efficient Super Resolution challenge.
 
 
+![](./main.png)
+
+
 ## Test Dataset
 You should edit the address of test dataset in `./test_demo.py`
 
