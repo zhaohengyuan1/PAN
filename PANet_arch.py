@@ -85,6 +85,7 @@ class SCPA(nn.Module):
         return out
     
 class PANet(nn.Module):
+    '''Pixel Attention Network'''
     def __init__(self, in_nc, out_nc, nf, nb):
         super(PANet, self).__init__()
         # SCPA
