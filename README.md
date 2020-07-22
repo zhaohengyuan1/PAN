@@ -2,7 +2,7 @@
 Pixel Attention Network (PANet) is for AIM2020 Efficient Super Resolution challenge.
 
 
-![](./main.png)
+![](./Figs/main.png)
 
 
 ## Test Dataset
