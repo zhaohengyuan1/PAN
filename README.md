@@ -1,5 +1,5 @@
 # PANet
-PANet is for AIM2020 Efficient Super Resolution challenge.
+Pixel Attention Network (PANet) is for AIM2020 Efficient Super Resolution challenge.
 
 
 ## Test Dataset
