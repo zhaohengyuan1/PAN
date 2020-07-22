@@ -19,3 +19,7 @@ python test_demo.py
 ## Results
 
 The results are in `./test_results`
+
+## More
+
+Training code and more models will be released soon.
