@@ -1,6 +1,6 @@
-# PANet
-Pixel Attention Network (PANet) is for AIM2020 Efficient Super Resolution challenge.
-
+# PAN
+Pixel Attention Network (PAN) is for AIM2020 Efficient Super Resolution challenge.
+Only 272K than 1518K (SRResNet)
 
 ![](./Figs/main.png)
 
