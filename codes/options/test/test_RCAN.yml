@@ -1,0 +1,52 @@
+name: 001_RCANPAx4_DIV2K_40w_5e-5
+# name: AIM2020_Submitted
+suffix: ~  # add suffix to saved images
+model: sr
+distortion: sr
+scale: 4
+crop_border: ~  # crop border when evaluation. If None(~), crop the scale pixels
+save_img: False
+gpu_ids: [7]
+
+datasets:
+  test1:
+    name: Set5
+    mode: LQGT
+    dataroot_GT: /mnt/hyzhao/Documents/datasets/benchmark/Set5/HR
+    dataroot_LQ: /mnt/hyzhao/Documents/datasets/benchmark/Set5/LR_bicubic/X4
+  test2:
+    name: Set14
+    mode: LQGT
+    dataroot_GT: /mnt/hyzhao/Documents/datasets/benchmark/Set14/HR
+    dataroot_LQ: /mnt/hyzhao/Documents/datasets/benchmark/Set14/LR_bicubic/X4
+  test3:
+    name: B100
+    mode: LQGT
+    dataroot_GT: /mnt/hyzhao/Documents/datasets/benchmark/B100/HR
+    dataroot_LQ: /mnt/hyzhao/Documents/datasets/benchmark/B100/LR_bicubic/X4
+  test4:
+    name: Urban100
+    mode: LQGT
+    dataroot_GT: /mnt/hyzhao/Documents/datasets/benchmark/Urban100/HR
+    dataroot_LQ: /mnt/hyzhao/Documents/datasets/benchmark/Urban100/LR_bicubic/X4
+  test5:
+    name: Manga109
+    mode: LQGT
+    dataroot_GT: /mnt/hyzhao/Documents/datasets/benchmark/Manga109/HR
+    dataroot_LQ: /mnt/hyzhao/Documents/datasets/benchmark/Manga109/LR_bicubic/X4
+
+#### network structures
+network_G:
+  which_model_G: RCAN_PA
+  n_resgroups: 10
+  n_resblocks: 20
+  n_feats: 64
+  res_scale: 1
+  n_colors: 3
+  rgb_range: 1
+  scale: 4
+
+#### path
+path:
+  pretrain_model_G: ../experiments/001_RCANPAx4_DIV2K_40w_5e-5/models/36000_G.pth
+#   pretrain_model_G: ../experiments/pretrained_models/PANetx4_DF2K_submit2.pth

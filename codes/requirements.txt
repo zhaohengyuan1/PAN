@@ -1,0 +1,7 @@
+numpy
+opencv-python
+torchsummaryX
+lmdb
+pyyaml
+tb-nightly
+future
