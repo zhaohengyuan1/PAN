@@ -32,15 +32,15 @@ cd PAN
 ```
 2. Download the five test datasets (Set5, Set14, B100, Urban100, Manga109) from [Google Drive](https://drive.google.com/drive/folders/1lsoyAjsUEyp7gm1t6vZI9j7jr9YzKzcF?usp=sharing) 
 
-3. Pretrained models have be placed in `./experiments/pretrained_models/` folder.
+3. Pretrained models have be placed in `./experiments/pretrained_models/` folder. More models can be download from [Google Drive](https://drive.google.com/drive/folders/1_zZqTvvAb_ad4T4-uiIGF9CkNiPrBXGr?usp=sharing).
 
 4. Run test. We provide `x2,x3,x4` pretrained models.
 ```
 cd codes
 python test.py -opt option/test/test_PANx4.yml
 ```
-More training commond can be found in `./codes/run_scripts.sh` file.
-5. The output results will be sorted in `./results`. (We have been put our testing log file in `./results`)
+More testing commond can be found in `./codes/run_scripts.sh` file.
+5. The output results will be sorted in `./results`. (We have been put our testing log file in `./results`) We also provide our testing results on five benchmark datasets on [Google Drive](https://drive.google.com/drive/folders/1F6unBkp6L1oJb_gOgSHYM5ZZbyLImDPH?usp=sharing)
 
 ## How to Train
 
