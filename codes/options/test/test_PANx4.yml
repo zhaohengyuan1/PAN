@@ -5,7 +5,7 @@ distortion: sr
 scale: 4
 crop_border: ~  # crop border when evaluation. If None(~), crop the scale pixels
 save_img: True
-gpu_ids: [4]
+gpu_ids: [0]
 
 datasets:
   test1:

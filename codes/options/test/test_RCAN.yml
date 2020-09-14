@@ -1,12 +1,11 @@
-name: 001_RCANPAx4_DIV2K_40w_5e-5
-# name: AIM2020_Submitted
+name: RCANPAx4_DIV2K
 suffix: ~  # add suffix to saved images
 model: sr
 distortion: sr
 scale: 4
 crop_border: ~  # crop border when evaluation. If None(~), crop the scale pixels
 save_img: False
-gpu_ids: [7]
+gpu_ids: [0]
 
 datasets:
   test1:
@@ -48,5 +47,4 @@ network_G:
 
 #### path
 path:
-  pretrain_model_G: ../experiments/001_RCANPAx4_DIV2K_40w_5e-5/models/36000_G.pth
-#   pretrain_model_G: ../experiments/pretrained_models/PANetx4_DF2K_submit2.pth
+  pretrain_model_G: ../experiments/pretrained_models/RCAN_PA_DIV2K.pth

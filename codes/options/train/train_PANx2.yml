@@ -5,7 +5,7 @@ model: sr
 distortion: sr
 scale: 2
 save_img: False
-gpu_ids: [4]
+gpu_ids: [0]
 
 #### datasets
 datasets:

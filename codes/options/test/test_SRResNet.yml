@@ -1,12 +1,11 @@
-name: MSSResNet_DCMHead_BN_DIV2K_64c_16rc_16DCM_128p
-# classify_MSRResNetx4
+name: MSSResNet_PA_DIV2K
 suffix: ~  # add suffix to saved images
 model: sr
 distortion: sr
 scale: 4
 crop_border: ~  # crop border when evaluation. If None(~), crop the scale pixels
 save_img: True
-gpu_ids: [5]
+gpu_ids: [0]
 
 datasets:
   test1:
@@ -36,17 +35,13 @@ datasets:
     dataroot_LQ: /mnt/hyzhao/Documents/datasets/benchmark/Manga109/LR_bicubic/X4
 #### network structures
 network_G:
-  which_model_G: MSRResNet_DCM
+  which_model_G: MSRResNet_PA
   in_nc: 3
   out_nc: 3
   nf: 64
   nb: 16
-  rc: 16
-#   g: 4
   upscale: 4
 
 #### path
 path:
-  pretrain_model_G: ../experiments/MSSResNet_DCMHead_BN_DIV2K_64c_16rc_16DCM_128p/models/200000_G.pth
-#   pretrain_model_G: ../experiments/pretrained_models/MSRResNetx4.pth
-#   pretrain_model_G: ../experiments/pretrained_models/face_745000_G.pth
+  pretrain_model_G: ../experiments/pretrained_models/SRResNet_PA_DIV2K.pth

@@ -1,13 +1,10 @@
-# Not exactly the same as SRResNet in <Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network>
-# With 16 Residual blocks w/o BN
-
 #### general settings
-name: MSSResNet_DIV2K_32c_32b_256p
+name: MSSResNet_PA_DIV2K
 use_tb_logger: true
 model: sr
 distortion: sr
 scale: 4
-gpu_ids: [4]
+gpu_ids: [0]
 
 #### datasets
 datasets:
@@ -25,30 +22,24 @@ datasets:
     use_rot: true
     color: RGB
   val:
-    name: DIV2K10
+    name: Set5
     mode: LQGT
-    dataroot_GT: /mnt/hyzhao/Documents/datasets/DIV2K_Valid/val_10/HR/X4
-    dataroot_LQ: /mnt/hyzhao/Documents/datasets/DIV2K_Valid/val_10/LR/X4
-#     dataroot_GT: /mnt/hyzhao/Documents/datasets/benchmark/Set5/HR
-#     dataroot_LQ: /mnt/hyzhao/Documents/datasets/benchmark/Set5/LR_bicubic/X4
+    dataroot_GT: ../datasets/Set5/HR
+    dataroot_LQ: ../datasets/Set5/LR_bicubic/X4
 
 #### network structures
 network_G:
-  which_model_G: MSRResNet
+  which_model_G: MSRResNet_PA
   in_nc: 3
   out_nc: 3
-  nf: 32
-  rc: 16
-  nb: 32
-#   g: 4
+  nf: 64
+  nb: 16
   upscale: 4
 
 #### path
 path:
-#   pretrain_model_G: ../experiments/pretrained_models/SRResNet_TDB_16rc_pretrained_50w.pth
   pretrain_model_G: ~
   strict_load: true
-#   resume_state: ../experiments/MSSResNet_GAx4_DIV2K_64c_64b_4g_128p/training_state/320000.state
   resume_state: ~
 
 #### training settings: learning rate scheme, loss
