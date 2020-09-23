@@ -7,7 +7,7 @@ Authors: Hengyuan Zhao, [Xiangtao Kong](https://github.com/Xiangtaokong), [Jingw
 
 
 <p align="center">
-  <img height="350" src="show_figs/main.png">
+  <img height="350" src="https://github.com/zhaohengyuan1/PAN/blob/master/show_figs/main.png">
 </p>
 
 ## Dependencies
