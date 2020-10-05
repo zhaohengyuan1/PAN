@@ -1,7 +1,7 @@
 # PAN [:zap: 272K parameters]
 ### Lowest parameters in AIM2020 Efficient Super Resolution.
 
-## [Paper]() | [Video](https://www.bilibili.com/video/BV1Qh411R7vZ/)
+## [Paper](https://arxiv.org/abs/2010.01073) | [Video](https://www.bilibili.com/video/BV1Qh411R7vZ/)
 ## Efficient Image Super-Resolution Using Pixel Attention 
 Authors: Hengyuan Zhao, [Xiangtao Kong](https://github.com/Xiangtaokong), [Jingwen He](https://github.com/hejingwenhejingwen), [Yu Qiao](https://scholar.google.com/citations?user=gFtI-8QAAAAJ&hl=zh-CN), [Chao Dong](https://scholar.google.com.hk/citations?user=OSDCB0UAAAAJ&hl=zh-CN)
 
