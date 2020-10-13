@@ -133,7 +133,7 @@ class PAN(nn.Module):
         
         out = self.conv_last(fea)
         
-        ILR = F.interpolate(x, scale_factor=self.scale, mode='bilinear', align_corners=True)
+        ILR = F.interpolate(x, scale_factor=self.scale, mode='bilinear', align_corners=False)
         out = out + ILR
         return out
  
