@@ -73,5 +73,6 @@ python test_running_time.py
 Enhanced Quadratic Video Interpolation (winning solution of AIM2020 VTSR Challenge)
 [paper](https://arxiv.org/pdf/2009.04642.pdf) | [code](https://github.com/lyh-18/EQVI)
 
-## Mics
-Contact hy.zhao1 at siat.ac.cn for any questions or comments.
+## Contact
+Email: hy.zhao1@siat.ac.cn
+Wechat: zzzhy0331
