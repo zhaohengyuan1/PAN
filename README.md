@@ -75,4 +75,3 @@ Enhanced Quadratic Video Interpolation (winning solution of AIM2020 VTSR Challen
 
 ## Contact
 Email: hy.zhao1@siat.ac.cn
-Wechat: zzzhy0331
