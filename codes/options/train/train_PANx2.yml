@@ -12,8 +12,8 @@ datasets:
   train:
     name: DF2K
     mode: LQGT
-    dataroot_GT: /mnt/hyzhao/Documents/datasets/DF2K_train/HRx2_sub360
-    dataroot_LQ: /mnt/hyzhao/Documents/datasets/DF2K_train/LRx2_sub180
+    dataroot_GT: ../datasets/lmdb/Train/gt.lmdb
+    dataroot_LQ: ../datasets/lmdb/Train/lr.lmdb
     
     use_shuffle: true
     n_workers: 6  # per GPU
@@ -25,8 +25,8 @@ datasets:
   val:
     name: Set5
     mode: LQGT
-    dataroot_GT: ../datasets/Set5/HR
-    dataroot_LQ: ../datasets/Set5/LR_bicubic/X2
+    dataroot_GT: ../datasets/lmdb/Test/gt.lmdb
+    dataroot_LQ: ../datasets/lmdb/Test/lr.lmdb
 
 #### network structures
 network_G:
@@ -40,7 +40,7 @@ network_G:
   
 #### path
 path:
-  pretrain_model_G: ~
+  pretrain_model_G: ../experiments/pretrained_models/PANx2_DF2K.pth
   strict_load: true
   resume_state: ~
 
