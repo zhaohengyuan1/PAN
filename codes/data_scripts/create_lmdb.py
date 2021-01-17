@@ -15,7 +15,7 @@ import utils.util as util  # noqa: E402
 
 
 def main():
-    dataset = 'vimeo90k'  # vimeo90K | REDS | general (e.g., DIV2K, 291) | DIV2K_demo |test
+    dataset = 'general'  # vimeo90K | REDS | general (e.g., DIV2K, 291) | DIV2K_demo |test
     mode = 'LR'  # used for vimeo90k and REDS datasets
     # vimeo90k: GT | LR | flow
     # REDS: train_sharp, train_sharp_bicubic, train_blur_bicubic, train_blur, train_blur_comp
@@ -26,10 +26,26 @@ def main():
         REDS(mode)
     elif dataset == 'general':
         opt = {}
-        opt['img_folder'] = '../../datasets/DIV2K/DIV2K800_sub'
-        opt['lmdb_save_path'] = '../../datasets/DIV2K/DIV2K800_sub.lmdb'
-        opt['name'] = 'DIV2K800_sub_GT'
+        opt['img_folder'] = '../../datasets/Test/HR'
+        opt['lmdb_save_path'] = '../../datasets/lmdb/Test/gt.lmdb'
+        opt['name'] = 'Test_GT'
         general_image_folder(opt)
+
+        opt['img_folder'] = '../../datasets/Test/LR'
+        opt['lmdb_save_path'] = '../../datasets/lmdb/Test/lr.lmdb'
+        opt['name'] = 'Test_LR'
+        general_image_folder(opt)
+
+        opt['img_folder'] = '../../datasets/Train/HR'
+        opt['lmdb_save_path'] = '../../datasets/lmdb/Train/gt.lmdb'
+        opt['name'] = 'Train_GT'
+        general_image_folder(opt)
+
+        opt['img_folder'] = '../../datasets/Train/LR'
+        opt['lmdb_save_path'] = '../../datasets/lmdb/Train/lr.lmdb'
+        opt['name'] = 'Train_LR'
+        general_image_folder(opt)
+
     elif dataset == 'DIV2K_demo':
         opt = {}
         ## GT
@@ -47,7 +63,7 @@ def main():
 
 
 def read_image_worker(path, key):
-    img = cv2.imread(path, cv2.IMREAD_UNCHANGED)
+    img = cv2.imread(path, cv2.IMREAD_COLOR)
     return (key, img)
 
 
@@ -75,6 +91,8 @@ def general_image_folder(opt):
     #### read all the image paths to a list
     print('Reading image path list ...')
     all_img_list = sorted(glob.glob(osp.join(img_folder, '*')))
+    if len(all_img_list) > 9583:
+        all_img_list.pop(9583)
     keys = []
     for img_path in all_img_list:
         keys.append(osp.splitext(osp.basename(img_path))[0])
@@ -99,19 +117,20 @@ def general_image_folder(opt):
         print('Finish reading {} images.\nWrite lmdb...'.format(len(all_img_list)))
 
     #### create lmdb environment
-    data_size_per_img = cv2.imread(all_img_list[0], cv2.IMREAD_UNCHANGED).nbytes
+    data_size_per_img = cv2.imread(all_img_list[0], cv2.IMREAD_COLOR).nbytes
     print('data size per image is: ', data_size_per_img)
     data_size = data_size_per_img * len(all_img_list)
-    env = lmdb.open(lmdb_save_path, map_size=data_size * 10)
+    env = lmdb.open(lmdb_save_path, map_size=data_size * 2)
 
     #### write data to lmdb
     pbar = util.ProgressBar(len(all_img_list))
     txn = env.begin(write=True)
     resolutions = []
     for idx, (path, key) in enumerate(zip(all_img_list, keys)):
-        pbar.update('Write {}'.format(key))
+        if idx != 0:
+            pbar.update('Write {}'.format(key))
         key_byte = key.encode('ascii')
-        data = dataset[key] if read_all_imgs else cv2.imread(path, cv2.IMREAD_UNCHANGED)
+        data = dataset[key] if read_all_imgs else cv2.imread(path, cv2.IMREAD_COLOR)
         if data.ndim == 2:
             H, W = data.shape
             C = 1
