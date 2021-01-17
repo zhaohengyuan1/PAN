@@ -13,7 +13,7 @@ import options.options as option
 from utils import util
 from data import create_dataloader, create_dataset
 from models import create_model
-
+import matplotlib.pyplot as plt
 
 def init_dist(backend='nccl', **kwargs):
     """initialization for distributed training"""
@@ -211,8 +211,10 @@ def main():
                     # tensorboard logger
                     if opt['use_tb_logger'] and 'debug' not in opt['name']:
                         tb_logger.add_scalar('psnr', avg_psnr, current_step)
-                        tb_logger.add_image('output', sr_img, current_step)
-#                        tb_logger.add_figure('output', sr_img, current_step)
+
+                        fig = plt.figure()
+                        plt.imshow(sr_img)
+                        tb_logger.add_figure('output', fig, current_step)
                 else:  # video restoration validation
                     if opt['dist']:
                         # multi-GPU testing
