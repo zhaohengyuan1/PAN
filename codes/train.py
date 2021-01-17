@@ -211,7 +211,8 @@ def main():
                     # tensorboard logger
                     if opt['use_tb_logger'] and 'debug' not in opt['name']:
                         tb_logger.add_scalar('psnr', avg_psnr, current_step)
-                        tb_logger.add_figure('output', sr_img, current_step)
+                        tb_logger.add_image('output', sr_img, current_step)
+#                        tb_logger.add_figure('output', sr_img, current_step)
                 else:  # video restoration validation
                     if opt['dist']:
                         # multi-GPU testing
