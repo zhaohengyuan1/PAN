@@ -46,7 +46,7 @@ path:
 
 #### training settings: learning rate scheme, loss
 train:
-  lr_G: !!float 1e-4 #7e-4
+  lr_G: !!float 1e-5 #7e-4
   lr_scheme: CosineAnnealingLR_Restart
   beta1: 0.9
   beta2: 0.99
@@ -61,7 +61,7 @@ train:
   pixel_weight: 1.0
 
   manual_seed: 10
-  val_freq: !!float 3e2
+  val_freq: !!float 1e3
 
 #### logger
 logger:
