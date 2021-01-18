@@ -40,7 +40,7 @@ network_G:
   
 #### path
 path:
-  pretrain_model_G: ../experiments/pretrained_models/PANx2_DF2K.pth
+  pretrain_model_G: ~ #../experiments/pretrained_models/PANx2_DF2K.pth
   strict_load: true
   resume_state: ~
 
