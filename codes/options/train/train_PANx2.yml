@@ -42,7 +42,7 @@ network_G:
 path:
   pretrain_model_G: ~ #../experiments/pretrained_models/PANx2_DF2K.pth
   strict_load: true
-  resume_state: ~
+  resume_state: ../experiments/PANx2_DF2K/training_state/210000.state
 
 #### training settings: learning rate scheme, loss
 train:
