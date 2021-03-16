@@ -75,3 +75,15 @@ Enhanced Quadratic Video Interpolation (winning solution of AIM2020 VTSR Challen
 
 ## Contact
 Email: hy.zhao1@siat.ac.cn
+
+If you find our work is useful, please kindly cite it.
+```
+@misc{zhao2020efficient,
+      title={Efficient Image Super-Resolution Using Pixel Attention}, 
+      author={Hengyuan Zhao and Xiangtao Kong and Jingwen He and Yu Qiao and Chao Dong},
+      year={2020},
+      eprint={2010.01073},
+      archivePrefix={arXiv},
+      primaryClass={eess.IV}
+}
+```
