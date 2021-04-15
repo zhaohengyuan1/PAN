@@ -74,7 +74,7 @@ Enhanced Quadratic Video Interpolation (winning solution of AIM2020 VTSR Challen
 [paper](https://arxiv.org/pdf/2009.04642.pdf) | [code](https://github.com/lyh-18/EQVI)
 
 ## Contact
-Email: hy.zhao1@siat.ac.cn
+Email: hubylidayuan@siat.ac.cn
 
 If you find our work is useful, please kindly cite it.
 ```
