@@ -6,7 +6,7 @@
 Authors: Hengyuan Zhao, [Xiangtao Kong](https://github.com/Xiangtaokong), [Jingwen He](https://github.com/hejingwenhejingwen), [Yu Qiao](https://scholar.google.com/citations?user=gFtI-8QAAAAJ&hl=zh-CN), [Chao Dong](https://scholar.google.com.hk/citations?user=OSDCB0UAAAAJ&hl=zh-CN)
 
 
-<p align="center">
+<p align="left">
   <img height="350" src="https://github.com/zhaohengyuan1/PAN/blob/master/show_figs/main.jpg">
 </p>
 
