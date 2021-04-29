@@ -1,4 +1,3 @@
-## If you have questions about results, please check the new update version of file PAN_arch.py.
 # PAN [:zap: 272K parameters]
 ### Lowest parameters in AIM2020 Efficient Super Resolution.
 
