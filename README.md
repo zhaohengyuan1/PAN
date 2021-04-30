@@ -39,8 +39,8 @@ cd PAN
 cd codes
 python test.py -opt option/test/test_PANx4.yml
 ```
-More testing commond can be found in `./codes/run_scripts.sh` file.
-5. The output results will be sorted in `./results`. (We have been put our testing log file in `./results`) We also provide our testing results on five benchmark datasets on [Google Drive](https://drive.google.com/drive/folders/1F6unBkp6L1oJb_gOgSHYM5ZZbyLImDPH?usp=sharing) or [Baidu Drive](https://pan.baidu.com/s/15xAwojWF1AAyGiSsqgeDsA), password: a4k3.
+More testing commonds can be found in `./codes/run_scripts.sh` file.
+5. The output results will be sorted in `./results`. (We have been put our testing log file in `./results`) We also provide our testing results on five benchmark datasets on [Google Drive](https://drive.google.com/drive/folders/1F6unBkp6L1oJb_gOgSHYM5ZZbyLImDPH?usp=sharing).
 
 ## How to Train
 
