@@ -77,13 +77,13 @@ Email: hubylidayuan@gmail.com
 
 If you find our work is useful, please kindly cite it.
 ```
-@misc{zhao2020efficient,
-      title={Efficient Image Super-Resolution Using Pixel Attention}, 
-      author={Hengyuan Zhao and Xiangtao Kong and Jingwen He and Yu Qiao and Chao Dong},
-      year={2020},
-      eprint={2010.01073},
-      archivePrefix={arXiv},
-      primaryClass={eess.IV}
+@inproceedings{zhao2020efficient,
+  title={Efficient image super-resolution using pixel attention},
+  author={Zhao, Hengyuan and Kong, Xiangtao and He, Jingwen and Qiao, Yu and Dong, Chao},
+  booktitle={European Conference on Computer Vision},
+  pages={56--72},
+  year={2020},
+  organization={Springer}
 }
 ```
 
