@@ -1,4 +1,4 @@
-# PAN [:zap: 272K parameters]
+# PAN [🔥 272K parameters]
 ### Lowest parameters in AIM2020 Efficient Super Resolution.
 
 ## [Paper](https://arxiv.org/abs/2010.01073) | [Video](https://www.bilibili.com/video/BV1Qh411R7vZ/)
